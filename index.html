@@ -45,6 +45,25 @@
 	<script src="js/controllers/myTrip/settingsCtrl.js"></script>
 	<script src="js/services/WebService.js"></script>
 	
+	 <script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        var element = document.getElementById('deviceProperties');
+        element.innerHTML = 'Device Model: '    + device.model    + '<br />' +
+                            'Device Cordova: '  + device.cordova  + '<br />' +
+                            'Device Platform: ' + device.platform + '<br />' +
+                            'Device UUID: '     + device.uuid     + '<br />' +
+                            'Device Version: '  + device.version  + '<br />';
+    }
+
+    </script>
+	
 		
 	<!-- <script src="assets/datePickerIonic/datetimepicker-ionic.js"></script>   -->
 	
@@ -60,4 +79,3 @@
     <ion-nav-view></ion-nav-view>
   </body>
 </html>
-
